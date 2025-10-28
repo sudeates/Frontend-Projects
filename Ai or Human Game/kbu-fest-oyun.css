@@ -1,0 +1,170 @@
+/* ===========================
+   AI mi? İnsan mı? — Temiz CSS
+   =========================== */
+
+:root{
+  --bg:#f6f5f2;
+  --ink:#141414;
+  --muted:#6b6b6b;
+  --brand:#e74c3c;
+
+  /* Yükseklik oranları (oyuna göre ufak oyna) */
+  --poster-h: 50vh;   /* afiş yüksekliği */
+  --image-h: 70vh;    /* soru görseli max yükseklik */
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
+  margin:0; padding:0;
+  background:var(--bg); color:var(--ink);
+  font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+/* ====== Genel Yerleşim ====== */
+.wrap{
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 16px;
+}
+
+.card{
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;                 /* içeride dikey aralık */
+}
+
+h1{ font-size:30px; margin:0 }
+.sub{ color:var(--muted); margin:0 }
+.center{ text-align:center }
+.muted{ color:var(--muted) }
+
+.topbar{
+  display:flex; justify-content:space-between; align-items:center; gap:12px;
+}
+
+.row{
+  display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+}
+
+input[type="text"]{
+  padding:12px; border:1px solid #ddd; border-radius:12px; flex:1; min-width:260px;
+}
+
+.btn{
+  padding:12px 18px; border-radius:12px; border:1px solid #ddd;
+  background:#fff; cursor:pointer; font-weight:600;
+  transition:transform .06s ease, box-shadow .2s;
+}
+.btn:hover{ transform:translateY(-1px); box-shadow:0 6px 18px rgba(0,0,0,.08) }
+.btn.primary{ background:var(--ink); color:#fff; border-color:var(--ink) }
+.btn.ai{ border-color:var(--brand) }
+.btn.human{ border-color:#2ecc71 }
+.btn.warn{ border-color:#f39c12 }
+.btn:disabled{ opacity:.55; cursor:not-allowed }
+
+.tag{
+  display:inline-block; padding:6px 10px; border:1px solid #ddd;
+  border-radius:999px; font-size:13px; color:var(--muted);
+}
+
+details summary{ cursor:pointer }
+.admin-tools{ margin-top:6px }
+
+/* ====== Poster (oyun başı görsel) ====== */
+.poster{
+  display:flex; justify-content:center; align-items:center;
+  margin:6px 0 4px;
+}
+.poster img{
+  display:block;
+  width:auto; max-width:100%;
+  height:var(--poster-h);
+  object-fit:contain;             /* kırpma yok */
+  border-radius:16px;
+}
+
+/* ====== İlerleme ====== */
+.progress{ height:8px; background:#eee; border-radius:999px; overflow:hidden; margin:6px 0 }
+.bar{ height:100%; width:0; background:var(--brand); transition:width .3s }
+
+/* ====== Soru Görsel Alanı ====== */
+.imgbox{
+  width:100%;
+  background:#111;
+  border-radius:12px;
+  overflow:hidden;
+  display:grid; place-items:center;
+  padding:0;
+  min-height:260px;
+}
+.imgbox img{
+  display:block;
+  width:100%;
+  height:auto;                 /* oranı koru */
+  max-height:var(--image-h);   /* ekrana taşmadan sığsın */
+  object-fit:contain;          /* kırpma yok */
+  background:#111;
+}
+
+/* ====== Oyun Butonları (ortalı & büyük) ====== */
+#screen-game .row{ justify-content:center }
+#screen-game .btn.ai, #screen-game .btn.human{
+  font-size:18px; padding:14px 24px; min-width:160px; border-width:2px;
+}
+
+/* ====== Bitiş Ekranı — Yanlış Galerisi ====== */
+.wrong-list{
+  display:flex; flex-wrap:wrap; justify-content:center;
+  gap:10px; margin-top:6px;
+}
+.wrong-item{
+  width:120px; background:#f4f4f4;
+  border-radius:8px; text-align:center; padding:6px;
+  transition:transform .12s ease;
+}
+.wrong-item:hover{ transform:translateY(-3px) scale(1.02) }
+.wrong-item img{
+  width:100%; aspect-ratio: 1/1; object-fit:cover; border-radius:6px;
+}
+.wrong-item p{ margin:6px 0 0; font-size:13px }
+
+/* ==== Foto büyütme (lightbox) ==== */
+.zoom-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.85);
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  cursor: zoom-out;              /* arka plana tıklayınca kapanacak */
+}
+.zoom-overlay img{
+  max-width: 96vw;
+  max-height: 96vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;           /* kırpma yok */
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.4);
+  cursor: default;
+}
+
+/* Overlay açıkken sayfa kaymasın */
+body.modal-open{
+  overflow: hidden;
+}
+
+
+/* ====== Küçük Ekran Ayarları ====== */
+@media (max-width: 480px){
+  :root{ --poster-h: 24vh; --image-h: 56vh; }
+  #screen-game .btn.ai, #screen-game .btn.human{
+    font-size:16px; padding:12px 18px; min-width:140px;
+  }
+}
+

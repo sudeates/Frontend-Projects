@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI mi? İnsan mı?</title>
+  <link rel="stylesheet" href="kbu-fest-oyun.css">
+</head>
+<body>
+<div class="wrap">
+
+  <!-- START -->
+  <div class="card" id="screen-start">
+    <div class="topbar">
+      <h1>AI mi? İnsan mı?</h1>
+      <span class="tag">Offline • 2 Gün</span>
+    </div>
+    <p class="sub">7 soru var. Aynı gün, aynı isimle ikinci kez oynanamaz.</p>
+
+    <div class="row">
+      <input id="playerName" type="text" placeholder="Ad Soyad" />
+      <button class="btn primary" id="startBtn">Oyuna Başla</button>
+    </div>
+     <div class="poster">
+      <img id="posterImage" src="assets/poster.png" alt="Oyun Afişi">
+    </div>
+    <small class="muted">Not: Kayıtlar bu cihazda bugün için tutulur (internet gerekmez).</small>
+
+    <details class="admin-tools">
+      <summary class="muted">Organizatör araçları</summary>
+      <div class="row">
+        <button class="btn" id="downloadCsvBtn">CSV indir</button>
+        <button class="btn warn" id="clearPlayersBtn">Bugünkü listeyi temizle</button>
+      </div>
+      <small class="muted">Kısayol: Oyun sırasında <b>A</b>=Yapay Zekâ, <b>İ/H</b>=İnsan • <b>Shift+L</b>=Gün listesi</small>
+    </details>
+  </div>
+
+  <!-- GAME -->
+  <div class="card" id="screen-game" style="display:none">
+    <!-- Afiş alanı -->
+   
+
+    <div class="topbar">
+      <div><strong id="who"></strong></div>
+      <div class="muted" id="counter">Soru 1/7</div>
+    </div>
+
+    <div class="progress"><div class="bar" id="bar"></div></div>
+
+    <div class="imgbox">
+      <img id="qImage" alt="Soru görseli">
+    </div>
+
+    <div class="row" style="margin-top:14px">
+      <button class="btn ai" id="btnAI">Yapay Zekâ</button>
+      <button class="btn human" id="btnHuman">İnsan</button>
+    </div>
+  </div>
+
+  <!-- END -->
+  <div class="card center" id="screen-end" style="display:none">
+    <h1>Skorun: <span id="score"></span>/7</h1>
+    <div id="review" class="muted" style="margin:8px 0 12px"></div>
+
+    <div class="row" style="justify-content:center">
+      <button class="btn primary" id="markRedeemed">Ödül verildi ✅</button>
+      <button class="btn" id="playAgain">Yeni Oyuncu</button>
+    </div>
+  </div>
+
+</div>
+<div id="zoomOverlay" class="zoom-overlay" style="display:none">
+  <img id="zoomImg" alt="Büyütülmüş görsel">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="kbu-fest-oyun.js"></script>
+</body>
+</html>
