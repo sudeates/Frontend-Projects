@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reddit</title>
+        <link rel="stylesheet" href="reddit.css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-left-side">
+                <a href="https://www.reddit.com/?rdt=40461" >
+                    <div class="reddit-logo"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
+                            <circle fill="#FF4500" cx="10" cy="10" r="10"></circle>
+                            <path fill="#FFF" d="M16.67 10a1.46 1.46 0 0 0-2.47-1 7.12 7.12 0 0 0-3.85-1.23L11 4.65l2.14.45a1 1 0 1 0 .13-.61L10.82 4a.31.31 0 0 0-.37.24l-.74 3.47a7.14 7.14 0 0 0-3.9 1.23 1.46 1.46 0 1 0-1.61 2.39 2.87 2.87 0 0 0 0 .44c0 2.24 2.61 4.06 5.83 4.06s5.83-1.82 5.83-4.06a2.87 2.87 0 0 0 0-.44 1.46 1.46 0 0 0 .81-1.33Zm-10 1a1 1 0 1 1 1 1 1 1 0 0 1-1-1Zm5.81 2.75a3.84 3.84 0 0 1-2.47.77 3.84 3.84 0 0 1-2.47-.77.27.27 0 0 1 .38-.38A3.27 3.27 0 0 0 10 14a3.28 3.28 0 0 0 2.09-.61.27.27 0 1 1 .39.4Zm-.18-1.71a1 1 0 1 1 1-1 1 1 0 0 1-1.01 1.04Z"></path>
+                          </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="search-bar-part">
+                <button class="search-button">
+                    <svg rpl="" fill="currentColor" height="16" icon-name="search-outline" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"> <!--?lit$417713282$--><!--?lit$417713282$--><path d="M19.5 18.616 14.985 14.1a8.528 8.528 0 1 0-.884.884l4.515 4.515.884-.884ZM1.301 8.553a7.253 7.253 0 1 1 7.252 7.253 7.261 7.261 0 0 1-7.252-7.253Z"></path><!--?--> </svg>
+                </button>
+                <input class="search-bar" "text" placeholder="Search Reddit">
+            </div>
+            <div class="header-right-side">
+                <button class="get-app-part">
+                    <div style="padding-left: 6px;
+                                padding-top: 3px;">
+                        <svg rpl="" fill="currentColor" height="20" icon-name="qr-code-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.8 16h-3.7v-1.2h3.7v-3.7H16v3.7c0 .7-.5 1.2-1.2 1.2ZM9 7.8V5.2C9 4.5 8.5 4 7.8 4H5.2C4.5 4 4 4.5 4 5.2v2.5C4 8.5 4.5 9 5.2 9h2.5C8.5 9 9 8.5 9 7.8Zm-1.2 0H5.3V5.3h2.5v2.5Zm8.2 0V5.2c0-.7-.5-1.2-1.2-1.2h-2.5c-.8 0-1.3.5-1.3 1.2v2.5c0 .8.5 1.3 1.2 1.3h2.5c.8 0 1.3-.5 1.3-1.2Zm-1.2 0h-2.5V5.3h2.5v2.5Zm-5.8 7v-2.5c0-.8-.5-1.3-1.2-1.3H5.2c-.7 0-1.2.5-1.2 1.2v2.5c0 .8.5 1.3 1.2 1.3h2.5c.8 0 1.3-.5 1.3-1.2Zm-1.2 0H5.3v-2.5h2.5v2.5Zm-.8 3H2.6c-.2 0-.4-.2-.4-.4V13H1v4.4c0 .9.7 1.6 1.6 1.6H7v-1.2Zm12-.4V13h-1.2v4.4c0 .2-.2.4-.4.4H13V19h4.4c.9 0 1.6-.7 1.6-1.6Zm0-14.8c0-.9-.7-1.6-1.6-1.6H13v1.2h4.4c.2 0 .4.2.4.4V7H19V2.6Zm-16.8 0c0-.2.2-.4.4-.4H7V1H2.6C1.7 1 1 1.7 1 2.6V7h1.2V2.6Z"></path>
+                        </svg>
+                    </div>
+                    <div class="get-app-text">
+                            Get App
+                    </div>
+                </button>
+                <button class="log-in">
+                    Log In
+                </button>
+                <button class="open-settings-menu">
+                    <svg rpl="" fill="currentColor" height="20" icon-name="overflow-horizontal-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5 10a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM10 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left-side">
+                <div class="sidebar">
+                    <div class="left-top-part">
+                        <div class="home-part">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="home-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m17.71 8.549 1.244.832v8.523a1.05 1.05 0 0 1-1.052 1.046H12.73a.707.707 0 0 1-.708-.707v-4.507c0-.76-1.142-1.474-2.026-1.474-.884 0-2.026.714-2.026 1.474v4.507a.71.71 0 0 1-.703.707H2.098a1.046 1.046 0 0 1-1.052-1.043V9.381l1.244-.835v9.158h4.44v-3.968c0-1.533 1.758-2.72 3.27-2.72s3.27 1.187 3.27 2.72v3.968h4.44V8.549Zm2.04-1.784L10.646.655a1.12 1.12 0 0 0-1.28-.008L.25 6.765l.696 1.036L10 1.721l9.054 6.08.696-1.036Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Home
+                            </div>
+                        </div>
+                        <div class="popular-part">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="popular-fill" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 0a10 10 0 1 0 10 10A10.01 10.01 0 0 0 10 0Zm4 13.791L10.812 10.6l-6.245 6.247a8.92 8.92 0 0 1-1.414-1.414L9.4 9.188 6.209 6h7.778l.013.638v7.153Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Popular
+                            </div>
+                        </div>
+                    </div>
+                    <div class="topics-part">
+                        <div class="topics-header">
+                            <div class="topics-header-text" >
+                                TOPICS
+                            </div>
+                        </div>
+                        <div class="topics-sections">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="topic-videogaming-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.929 14.17 18.277 6.6a4.631 4.631 0 0 0-4.52-3.6H5.702a4.623 4.623 0 0 0-4.58 3.908L.034 14.387a3.134 3.134 0 0 0 .735 2.5 3.227 3.227 0 0 0 5.553-1.284l.39-1.635h5.794l.39 1.635A3.2 3.2 0 0 0 16.01 18h.782a3.211 3.211 0 0 0 3.123-2.444c.109-.455.114-.929.015-1.386Zm-1.6 1.85a1.964 1.964 0 0 1-1.54.73h-.781a1.947 1.947 0 0 1-1.9-1.453l-.63-2.476H5.74L5.11 15.3a1.947 1.947 0 0 1-1.9 1.453 1.974 1.974 0 0 1-1.5-.678 1.862 1.862 0 0 1-.443-1.506l1.09-7.481A3.366 3.366 0 0 1 5.7 4.25h8.062a3.373 3.373 0 0 1 3.3 2.614l1.65 7.573a1.877 1.877 0 0 1-.383 1.583h-.001Z"></path><path d="M6.256 6.212h-1.25v1.776h-1.73v1.25h1.73v1.622h1.25V9.238h1.73v-1.25h-1.73V6.212Z"></path><path d="M11.82 8.81a1 1 0 1 0 1.71.71 1.001 1.001 0 0 0-.3-.71 1.034 1.034 0 0 0-1.41 0Z"></path><path d="M15.23 6.85a.875.875 0 0 0-.32-.22c-.246-.1-.522-.1-.77 0a.875.875 0 0 0-.32.22.975.975 0 0 0 0 1.41 1 1 0 0 0 1.41 0 1.03 1.03 0 0 0 .22-1.09.877.877 0 0 0-.22-.32Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Gaming
+                            </div>
+                        </div>
+                        <div class="topics-sections">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="topic-sports-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0ZM4.124 16.465l1.259-3.007a9.906 9.906 0 0 0 .261-6.964l-1.186.4a8.656 8.656 0 0 1-.228 6.087l-1.046 2.5a8.75 8.75 0 1 1 13.632 0l-1.046-2.5a8.653 8.653 0 0 1-.228-6.086l-1.186-.4a9.906 9.906 0 0 0 .261 6.964l1.259 3.007a8.7 8.7 0 0 1-11.752-.001Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Sports
+                            </div>
+                        </div>
+                        <div class="topics-sections">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="topic-business-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.25 19H1v-4.5h1.25V19Zm4-7H5v7h1.25v-7Zm8 0H13v7h1.25v-7Zm4-5H17v12h1.25V7ZM6 7.557l3.206 3.2a1.126 1.126 0 0 0 1.59 0l8.647-8.646-.884-.884L10 9.79l-3.2-3.2a1.153 1.153 0 0 0-1.59 0L.559 11.231l.884.884L6 7.557Zm4.25 6.943H9V19h1.25v-4.5Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Business
+                            </div>
+                        </div>
+                        <div class="topics-sections">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="topic-crypto-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.66 14H8.34a1.126 1.126 0 0 1-.974-.562l-1.8-3.125a.623.623 0 0 1 0-.625l1.8-3.125A1.125 1.125 0 0 1 8.34 6h3.32a1.125 1.125 0 0 1 .974.563l1.8 3.125a.623.623 0 0 1 0 .625l-1.8 3.125a1.127 1.127 0 0 1-.974.562Zm-3.247-1.25h3.174L13.175 10l-1.588-2.75H8.413L6.825 10l1.588 2.75Zm-3.93-4.312 1.443-2.5a1.13 1.13 0 0 0 0-1.125l-1.9-3.292-1.083.625 1.864 3.229-1.37 2.375H.4V9h3.1a1.126 1.126 0 0 0 .982-.562Zm1.443 6.75a1.13 1.13 0 0 0 0-1.125l-1.444-2.5A1.125 1.125 0 0 0 3.508 11H.4v1.25h3.036l1.371 2.375-1.864 3.229 1.083.625 1.9-3.291ZM19.6 7.75h-3.036l-1.37-2.375 1.863-3.229-1.083-.625-1.9 3.292a1.13 1.13 0 0 0 0 1.125l1.444 2.5a1.126 1.126 0 0 0 .974.562h3.1l.008-1.25Zm-2.539 10.1-1.864-3.229 1.371-2.375H19.6V11h-3.1a1.125 1.125 0 0 0-.974.563l-1.444 2.5a1.13 1.13 0 0 0 0 1.125l1.9 3.291 1.08-.629Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Crypto
+                            </div>
+                        </div>
+                        <div class="topics-sections">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="topic-television-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.375 15h-4.75A2.63 2.63 0 0 1 3 12.375v-4.75A2.629 2.629 0 0 1 5.625 5h4.75A2.63 2.63 0 0 1 13 7.625v4.75A2.63 2.63 0 0 1 10.375 15Zm-4.75-8.75A1.377 1.377 0 0 0 4.25 7.625v4.75a1.377 1.377 0 0 0 1.375 1.375h4.75a1.377 1.377 0 0 0 1.375-1.375v-4.75a1.377 1.377 0 0 0-1.375-1.375h-4.75ZM16.29 7.33c.19-.188.297-.443.3-.71a1.224 1.224 0 0 0-.02-.19.602.602 0 0 0-.06-.19.557.557 0 0 0-.09-.17 1.01 1.01 0 0 0-.13-.16 1.02 1.02 0 0 0-1.08-.21.933.933 0 0 0-.33.21.61.61 0 0 0-.12.16.95.95 0 0 0-.1.17c-.023.062-.04.125-.05.19a1.007 1.007 0 0 0 .27.9.933.933 0 0 0 .33.21.838.838 0 0 0 .38.08 1.01 1.01 0 0 0 .7-.29Zm-.51 3.27c.066-.01.13-.03.19-.06a.557.557 0 0 0 .17-.09 1.017 1.017 0 0 0 .45-.83 1.224 1.224 0 0 0-.02-.19.602.602 0 0 0-.06-.19.557.557 0 0 0-.09-.17 1.01 1.01 0 0 0-.13-.16 1.02 1.02 0 0 0-1.08-.21.933.933 0 0 0-.33.21.61.61 0 0 0-.12.16.95.95 0 0 0-.1.17c-.023.062-.04.125-.05.19a1.007 1.007 0 0 0 .27.9c.192.183.445.286.71.29.064-.002.127-.008.19-.02Zm2.6 7.4H1.625A1.627 1.627 0 0 1 0 16.375V3.625A1.627 1.627 0 0 1 1.625 2h16.75A1.627 1.627 0 0 1 20 3.625v12.75A1.627 1.627 0 0 1 18.375 18h.005ZM1.625 3.25a.375.375 0 0 0-.375.375v12.75a.375.375 0 0 0 .375.375h16.75a.375.375 0 0 0 .375-.375V3.625a.375.375 0 0 0-.375-.375H1.625Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Television
+                            </div>
+                        </div>
+                        <div class="topics-sections">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="topic-celebrity-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 13.979a3.003 3.003 0 0 1-2.772-1.85 2.993 2.993 0 0 1 2.187-4.086 3.004 3.004 0 0 1 3.08 1.274 2.994 2.994 0 0 1-.373 3.784A3.003 3.003 0 0 1 10 13.98Zm0-4.745a1.752 1.752 0 0 0-1.617 1.08 1.746 1.746 0 0 0 1.275 2.383 1.752 1.752 0 0 0 2.092-1.715A1.748 1.748 0 0 0 10 9.234ZM15.5 19.497c-.15 0-.3-.03-.438-.09L10 17.235l-5.063 2.172a1.103 1.103 0 0 1-1.447-.555 1.097 1.097 0 0 1-.092-.558l.512-5.456L.274 8.724a1.098 1.098 0 0 1 .588-1.798l5.377-1.199 2.813-4.719a1.14 1.14 0 0 1 1.9 0l2.809 4.713 5.378 1.199a1.1 1.1 0 0 1 .838 1.294c-.038.187-.125.36-.25.504l-3.64 4.114.51 5.455a1.097 1.097 0 0 1-1.1 1.204l.004.006ZM10 15.977c.15 0 .298.03.436.088l4.894 2.097-.494-5.272a1.099 1.099 0 0 1 .27-.829l3.515-3.975-5.194-1.16a1.101 1.101 0 0 1-.71-.515L10 1.858 7.28 6.414a1.1 1.1 0 0 1-.707.512L1.38 8.086l3.515 3.975a1.098 1.098 0 0 1 .27.832l-.494 5.27 4.894-2.098c.138-.059.286-.089.436-.088Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Celebrity
+                            </div>
+                        </div>
+                        <div class="see-more-text">
+                            See More
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <div class="resources-header">
+                            <div class="resources-text-item">
+                                RESOURCES
+                            </div>
+                        </div>
+                        <div class="resources-sections">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="admin-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.938 9.211a3.25 3.25 0 0 0-3.177-2.642c-.45 0-.895.102-1.3.3a10.812 10.812 0 0 0-4.838-1.379l.81-3.741 2.444.519a1.492 1.492 0 1 0 .2-1.235L11.572.5a1.13 1.13 0 0 0-1.333.862L9.343 5.5a10.77 10.77 0 0 0-4.791 1.357 3.214 3.214 0 0 0-1.315-.289A3.248 3.248 0 0 0 .064 9.2c-.079.4-.085.812-.018 1.214a3.23 3.23 0 0 0 .912 1.754l.066.071v.127c.076 3.69 4.013 6.582 8.975 6.582 4.961 0 8.89-2.889 8.965-6.567l.006-.138.044-.046a3.252 3.252 0 0 0 .939-1.778c.067-.4.062-.81-.015-1.208Zm-1.221 1c-.075.42-.282.805-.59 1.1l-.392.407-.024.625c-.061 3-3.45 5.354-7.716 5.354-4.267 0-7.66-2.353-7.717-5.371l-.024-.6-.4-.433c-.3-.293-.5-.674-.571-1.087a2.138 2.138 0 0 1 .012-.765 2 2 0 0 1 1.942-1.623c.353.003.698.102 1 .286l.337.216.334-.22a9.435 9.435 0 0 1 4.758-1.381h.719a9.427 9.427 0 0 1 4.726 1.4l.347.225.343-.232a1.7 1.7 0 0 1 .96-.3 2 2 0 0 1 1.949 1.629c.049.253.051.512.007.766v.004Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                About Reddit
+                            </div>
+                        </div>
+                        <div class="resources-sections">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="topic-activism-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.175 13.11c-.237.462-.428.6-.514.627l-.133-.035c-.439-.238-1.278-2.03-1.278-5.2 0-2.95.729-4.718 1.184-5.144l.245-.087c.095.042.276.192.5.62l.284.556 1.113-.57-.285-.556c-.541-1.057-1.17-1.3-1.618-1.316h-.044a1.4 1.4 0 0 0-.754.23L3.7 5.852c-.915-.552-1.847-.991-2.61-.58C.237 5.735.044 6.98 0 9c.047 2 .24 3.245 1.093 3.7.783.423 1.754-.06 2.7-.637.288.1.685.218 1.224.37v4.347a1.122 1.122 0 0 0 1.121 1.12h2.75a1.123 1.123 0 0 0 1.122-1.12v-3l4.028 1.075c.183.088.384.134.587.135.45 0 1.1-.23 1.661-1.32l.285-.555-1.113-.57-.283.566Zm-11.882-2.2c-1.247.782-1.546.734-1.607.7C1.6 11.56 1.3 11.229 1.25 9c.049-2.25.345-2.582.434-2.63.064-.033.361-.081 1.61.7a.624.624 0 0 0 .54.058l8.838-3.146A13.9 13.9 0 0 0 12 8.5c-.034 1.608.221 3.21.754 4.728L3.79 10.834a.622.622 0 0 0-.497.073v.004Zm2.97 5.753v-3.877c.678.184 1.507.405 2.5.67v3.2l-2.5.007ZM19.25 8v1.25H16V8h3.25Zm-3.477-2.674 2.82-1.594.615 1.088-2.819 1.594-.616-1.088Zm.616 5.26 2.819 1.594-.615 1.088-2.82-1.594.616-1.088Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Advertise
+                            </div>
+                        </div>
+                        <div class="resources-sections">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="help-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 20a10 10 0 1 1 10-10 10.011 10.011 0 0 1-10 10Zm0-18.75A8.75 8.75 0 1 0 18.75 10 8.76 8.76 0 0 0 10 1.25Zm1.611 4.058a2.4 2.4 0 0 1 .994.861c.241.375.366.812.359 1.258a2.04 2.04 0 0 1-.167.854c-.1.229-.238.439-.407.622-.2.208-.413.404-.636.588-.223.188-.4.348-.533.483a1.754 1.754 0 0 0-.328.464 1.326 1.326 0 0 0-.13.591v.78H9.328v-.759a2.216 2.216 0 0 1 .601-1.572c.204-.21.421-.406.65-.588.209-.173.373-.316.492-.431a1.52 1.52 0 0 0 .3-.4 1.154 1.154 0 0 0-.058-1.128 1.192 1.192 0 0 0-.485-.421 1.525 1.525 0 0 0-.677-.151 1.545 1.545 0 0 0-.721.168 1.3 1.3 0 0 0-.713 1.131H7.256a2.628 2.628 0 0 1 1.381-2.293A3.132 3.132 0 0 1 10.175 5c.496-.008.987.097 1.436.308Zm-2.164 9.843a1.088 1.088 0 0 1-.386-.385 1.034 1.034 0 0 1-.144-.537c-.002-.186.048-.37.144-.53.094-.16.227-.293.386-.387a1.03 1.03 0 0 1 .53-.143 1.062 1.062 0 0 1 .926 1.597c-.096.159-.23.291-.389.385a1.034 1.034 0 0 1-.537.144 1.021 1.021 0 0 1-.53-.144Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Help
+                            </div>
+                        </div>
+                        <div class="resources-sections">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="topic-reading-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.375 2h-7.292A2.688 2.688 0 0 0 10 3a2.688 2.688 0 0 0-2.083-1H.625A.625.625 0 0 0 0 2.625v14.75A.625.625 0 0 0 .625 18h7.917v-1.25H1.25V3.25h6.667a1.465 1.465 0 0 1 1.458 1.469v11.093h1.25V4.719a1.465 1.465 0 0 1 1.458-1.469h6.667v13.5h-6.667a2.64 2.64 0 0 0-2.708 2.625V20h1.25v-.625A1.388 1.388 0 0 1 12.083 18h7.292a.624.624 0 0 0 .625-.625V2.625A.625.625 0 0 0 19.375 2Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Blog
+                            </div>
+                        </div>
+                        <div class="resources-sections">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="topic-careers-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.784 12.331a7 7 0 0 0 1.165.6l-6.174 6.178a2.747 2.747 0 0 1-3.883-3.884l6.18-6.181c.162.409.362.8.6 1.171l-5.897 5.894a1.5 1.5 0 0 0 0 2.116 1.533 1.533 0 0 0 2.118 0l5.891-5.894Zm4.481-.309a5.7 5.7 0 0 0 4.671-3.953 5.372 5.372 0 0 0-.1-3.538 1.116 1.116 0 0 0-.813-.7 1.127 1.127 0 0 0-1.039.305L14.118 7A.807.807 0 0 1 13 7a.79.79 0 0 1 0-1.116l2.864-2.863a1.127 1.127 0 0 0 .3-1.04 1.112 1.112 0 0 0-.7-.812 5.363 5.363 0 0 0-3.539-.1 5.7 5.7 0 0 0-3.946 4.666 5.627 5.627 0 0 0 6.287 6.287Zm.58-9.75L12.117 5a2.043 2.043 0 0 0 0 2.884 2.088 2.088 0 0 0 2.883 0l2.727-2.726c.271.825.276 1.714.013 2.542a4.432 4.432 0 0 1-3.628 3.079A4.377 4.377 0 0 1 9.22 5.887a4.429 4.429 0 0 1 4.342-3.822c.437 0 .87.07 1.284.207Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Careers
+                            </div>
+                        </div>
+                        <div class="resources-sections">
+                            <div>
+                                <svg rpl="" fill="currentColor" height="20" icon-name="author-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.128 0a4.78 4.78 0 0 0-4.774 4.774c.007.214.029.427.065.638l-.137-.138a1.143 1.143 0 0 0-1.719.126L.461 16.2a2.315 2.315 0 0 0 3.241 3.24l10.8-8.1a1.14 1.14 0 0 0 .122-1.718l-.138-.138c.212.036.426.058.64.065a4.773 4.773 0 1 0 0-9.547L15.128 0ZM2.955 18.445a1.07 1.07 0 0 1-1.5-1.5L9.487 6.239l4.175 4.176-10.707 8.03ZM15.128 8.3a3.53 3.53 0 1 1 0-7.06 3.53 3.53 0 0 1 0 7.06Zm-7.186 2.78L10.018 9l.88.88-2.077 2.08-.879-.88Z"></path>
+                                  </svg>
+                            </div>
+                            <div class="left-menu-item-text">
+                                Press
+                            </div>
+                        </div>
+                        <div class="see-more-text">
+                            See More
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="right-upper-part">
+                    <div class="news">
+                        <div class="news-container">
+                            <img class="news-photo" src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iiOEgwauSaUo/v1/1200x896.jpg">
+                            <div class="news-text-top">
+                                Eras Tour in Tokyo
+                            </div>
+                            <div class="news-text-bottom">
+                               Taylor Swift Tokyo Tour Before Super Bow...
+                            </div>
+                            <div class="subreddit-owner">
+                                <img class="subreddit-picture" src="https://styles.redditmedia.com/t5_2r812/styles/communityIcon_zfe8fwbeolv51.png" srcset="" sizes="" alt="r/Tokyo icon">
+                                <div class="subreddit-text">
+                                    <b>r/Tokyo</b> and more
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-container">
+                            <img class="news-photo" src="https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2016%2F0808%2Fr111330_1296x729_16%2D9.jpg">
+                            <div class="news-text-top">
+                                Gabby Douglas retur...
+                            </div>
+                            <div class="news-text-bottom">
+                                Gymnastics champion Gabby Douglas a...
+                            </div>
+                            <div class="subreddit-owner">
+                                <img class="subreddit-picture" src="https://styles.redditmedia.com/t5_2r812/styles/communityIcon_zfe8fwbeolv51.png" srcset="" sizes="" alt="r/Tokyo icon">
+                                <div class="subreddit-text">
+                                    <b>r/Sports</b> and more
+                                </div>
+                        </div>
+                        </div>
+                        <div class="news-container">
+                            <img class="news-photo" src="https://www.networkdizayn.com/wp-content/uploads/2021/05/A-Quiet-Place-Part-II.jpg">
+                            <div class="news-text-top">
+                                A Quiet Place: Day O...
+                            </div>
+                            <div class="news-text-bottom">
+                                A Quiet Place: Day One | Official Trailer
+                            </div>
+                            <div class="subreddit-owner">
+                                <img class="subreddit-picture" src="https://styles.redditmedia.com/t5_2r812/styles/communityIcon_zfe8fwbeolv51.png" srcset="" sizes="" alt="r/Tokyo icon">
+                                <div class="subreddit-text">
+                                    <b>r/movies</b> and more
+                                </div>
+                        </div>
+                        </div>
+                        <div class="news-container">
+                            <img class="news-photo" src="https://people.com/thmb/XOjQKKuMFjk1unSiSp_NrsGb3AA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(786x265:788x267)/florence-pugh-zendaya-dune-part-two-premiere-mexico-020724-1-6067f1e44bb6490186b0d89ecaacd5eb.jpg">
+                            <div class="news-text-top">
+                                Dune 2 Mexico pre...
+                            </div>
+                            <div class="news-text-bottom">
+                                Zendaya, Florence Pugh, and the rest of...
+                            </div>
+                            <div class="subreddit-owner">
+                                <img class="subreddit-picture" src="https://styles.redditmedia.com/t5_2r812/styles/communityIcon_zfe8fwbeolv51.png" srcset="" sizes="" alt="r/Tokyo icon">
+                                <div class="subreddit-text">
+                                    <b>r/popculturechat</b> and more
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-bottom-part">
+                    <div class="right-bottom-part-left">
+                        <div class="posts-menu">
+                            <div class="hot">
+                                <div class="hot-text">
+                                    Hot
+                                </div>
+                                <svg rpl="" fill="currentColor" height="16" icon-name="caret-down-outline" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"> <!--?lit$878595863$--><!--?lit$878595863$--><path d="M10 13.125a.624.624 0 0 1-.442-.183l-5-5 .884-.884L10 11.616l4.558-4.558.884.884-5 5a.624.624 0 0 1-.442.183Z"></path><!--?--> </svg>
+                            </div>
+                            <div class="everywhere">
+                                <div class="everywhere-text">
+                                    Everywhere
+                                </div>
+                                <svg rpl="" fill="currentColor" height="16" icon-name="caret-down-outline" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"> <!--?lit$878595863$--><!--?lit$878595863$--><path d="M10 13.125a.624.624 0 0 1-.442-.183l-5-5 .884-.884L10 11.616l4.558-4.558.884.884-5 5a.624.624 0 0 1-.442.183Z"></path><!--?--> </svg>
+                            </div>
+                            <div class="view">
+                                <svg rpl="" fill="currentColor" height="16" icon-name="view-card-outline" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.882 1H2.118A1.12 1.12 0 0 0 1 2.119v15.762A1.119 1.119 0 0 0 2.118 19h15.764A1.12 1.12 0 0 0 19 17.881V2.119A1.12 1.12 0 0 0 17.882 1Zm-.132 16.75H2.25v-7.138h15.5v7.138ZM2.25 9.362V2.25h15.5v7.112H2.25Z"></path>
+                                  </svg>
+                                  <svg rpl="" fill="currentColor" height="16" icon-name="caret-down-outline" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"> <!--?lit$878595863$--><!--?lit$878595863$--><path d="M10 13.125a.624.624 0 0 1-.442-.183l-5-5 .884-.884L10 11.616l4.558-4.558.884.884-5 5a.624.624 0 0 1-.442.183Z"></path><!--?--> </svg>
+                            </div>
+                        </div>
+                        <div class="posts">
+                            <div class="post-info">
+                                <div class="subreddit-part">
+                                    <img style="height: 24px; width:24px;" src="https://b.thumbs.redditmedia.com/b19-jQLBsVc2-EQfPx5WEQkYIL_clR0mhba4-pHT0AA.png" srcset="" sizes="" alt="r/Damnthatsinteresting icon">
+                                    <div class="subreddit-name">
+                                        r/Damnthatsinteresting
+                                    </div>
+                                    <div class="time-info">
+                                        • 5 hr. ago
+                                    </div>
+                                </div>
+                                <div class="left-part">
+                                    <div class="join-button">
+                                        Join
+                                   </div>
+                                   <div class="options">
+                                       <svg rpl="" fill="currentColor" height="16" icon-name="overflow-horizontal-fill" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"> <!--?lit$878595863$--><!--?lit$878595863$--><path d="M6 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm6 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"></path><!--?--> </svg>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="post-caption">
+                                How many members does each European country subreddit have?
+                            </div>  
+                            <div class="post-image-part">
+                                <img class="post-image" alt="r/Turkey - Avrupa ülkelerinin subreddit büyüklükleri" class="media-lightbox-img max-h-[100vw] h-full w-full object-contain relative" loading="lazy" fetchpriority="auto" src="https://preview.redd.it/avrupa-%C3%BClkelerinin-subreddit-b%C3%BCy%C3%BCkl%C3%BCkleri-v0-ov2wevu9kqic1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=a6f5eb661f89255a1cf12a67c19df68284d82499" srcset="https://preview.redd.it/avrupa-%C3%BClkelerinin-subreddit-b%C3%BCy%C3%BCkl%C3%BCkleri-v0-ov2wevu9kqic1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=6d10c8a47f8a9270fdee04b8a83a6e814951b31b 320w, https://preview.redd.it/avrupa-%C3%BClkelerinin-subreddit-b%C3%BCy%C3%BCkl%C3%BCkleri-v0-ov2wevu9kqic1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=a6f5eb661f89255a1cf12a67c19df68284d82499 640w, https://preview.redd.it/avrupa-%C3%BClkelerinin-subreddit-b%C3%BCy%C3%BCkl%C3%BCkleri-v0-ov2wevu9kqic1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=302530f189840793a6f1bea2a7a9ea45c701a753 1080w, https://preview.redd.it/avrupa-%C3%BClkelerinin-subreddit-b%C3%BCy%C3%BCkl%C3%BCkleri-v0-ov2wevu9kqic1.png?auto=webp&amp;s=8b1a94e85206a85f4def67c64ed42393b446e9e9 4098w" sizes="(min-width: 1415px) 750px, (min-width: 768px) 50vw, 100vw">
+                            </div>
+                            <div class="like-comment-share">
+                                 <div class="like">
+                                     <svg class="like-icon" rpl="" fill="currentColor" height="16" icon-name="upvote-outline" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"> <!--?lit$135805713$--><!--?lit$135805713$--><path d="M12.877 19H7.123A1.125 1.125 0 0 1 6 17.877V11H2.126a1.114 1.114 0 0 1-1.007-.7 1.249 1.249 0 0 1 .171-1.343L9.166.368a1.128 1.128 0 0 1 1.668.004l7.872 8.581a1.25 1.25 0 0 1 .176 1.348 1.113 1.113 0 0 1-1.005.7H14v6.877A1.125 1.125 0 0 1 12.877 19ZM7.25 17.75h5.5v-8h4.934L10 1.31 2.258 9.75H7.25v8ZM2.227 9.784l-.012.016c.01-.006.014-.01.012-.016Z"></path><!--?--> </svg>
+                                     <div class="like-count">52</div>
+                                    <svg class="dislike-icon" rpl="" fill="currentColor" height="16" icon-name="downvote-outline" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"> <!--?lit$135805713$--><!--?lit$135805713$--><path d="M10 20a1.122 1.122 0 0 1-.834-.372l-7.872-8.581A1.251 1.251 0 0 1 1.118 9.7 1.114 1.114 0 0 1 2.123 9H6V2.123A1.125 1.125 0 0 1 7.123 1h5.754A1.125 1.125 0 0 1 14 2.123V9h3.874a1.114 1.114 0 0 1 1.007.7 1.25 1.25 0 0 1-.171 1.345l-7.876 8.589A1.128 1.128 0 0 1 10 20Zm-7.684-9.75L10 18.69l7.741-8.44H12.75v-8h-5.5v8H2.316Zm15.469-.05c-.01 0-.014.007-.012.013l.012-.013Z"></path><!--?--> </svg>
+                                </div>
+                                 <div class="comment">
+                                     <svg class="comment-icon" rpl="" aria-hidden="true" class="icon-comment" fill="currentColor" height="20" icon-name="comment-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"> <!--?lit$135805713$--><!--?lit$135805713$--><path d="M7.725 19.872a.718.718 0 0 1-.607-.328.725.725 0 0 1-.118-.397V16H3.625A2.63 2.63 0 0 1 1 13.375v-9.75A2.629 2.629 0 0 1 3.625 1h12.75A2.63 2.63 0 0 1 19 3.625v9.75A2.63 2.63 0 0 1 16.375 16h-4.161l-4 3.681a.725.725 0 0 1-.489.191ZM3.625 2.25A1.377 1.377 0 0 0 2.25 3.625v9.75a1.377 1.377 0 0 0 1.375 1.375h4a.625.625 0 0 1 .625.625v2.575l3.3-3.035a.628.628 0 0 1 .424-.165h4.4a1.377 1.377 0 0 0 1.375-1.375v-9.75a1.377 1.377 0 0 0-1.374-1.375H3.625Z"></path><!--?--> </svg>
+                                     <div class="comment-count">
+                                            15
+                                    </div>
+                                </div>
+                                 <div class="share">
+                                     <svg class="share-icon" rpl="" aria-hidden="true" class="icon-share" fill="currentColor" height="20" icon-name="share-ios-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"> <!--?lit$135805713$--><!--?lit$135805713$--><path d="M19 11v5.378A2.625 2.625 0 0 1 16.378 19H3.622A2.625 2.625 0 0 1 1 16.378V11h1.25v5.378a1.373 1.373 0 0 0 1.372 1.372h12.756a1.373 1.373 0 0 0 1.372-1.372V11H19ZM9.375 3.009V14h1.25V3.009l2.933 2.933.884-.884-4-4a.624.624 0 0 0-.884 0l-4 4 .884.884 2.933-2.933Z"></path><!--?--> </svg>
+                                    <div class="share-text">
+                                         Share
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="posts">
+                            <div class="post-info">
+                                <div class="subreddit-part">
+                                    <img style="height: 24px; width:24px;" src="https://b.thumbs.redditmedia.com/b19-jQLBsVc2-EQfPx5WEQkYIL_clR0mhba4-pHT0AA.png" srcset="" sizes="" alt="r/Damnthatsinteresting icon">
+                                    <div class="subreddit-name">
+                                        r/gaming
+                                    </div>
+                                    <div class="time-info">
+                                        • 5 hr. ago
+                                    </div>
+                                </div>
+                                <div class="left-part">
+                                    <div class="join-button">
+                                        Join
+                                   </div>
+                                   <div class="options">
+                                       <svg rpl="" fill="currentColor" height="16" icon-name="overflow-horizontal-fill" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"> <!--?lit$878595863$--><!--?lit$878595863$--><path d="M6 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm6 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"></path><!--?--> </svg>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="post-caption">
+                                What’s a game franchise that has gotten worse over the years?
+                            </div> 
+                            <div class="post-description">
+                                I’ll take Saints Row The reboot wasn’t the greatest in the series, there probably won’t be another game in the series. I remember the older games being a blast.
+                            </div>
+                            <div class="like-comment-share">
+                                 <div class="like">
+                                     <svg class="like-icon" rpl="" fill="currentColor" height="16" icon-name="upvote-outline" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"> <!--?lit$135805713$--><!--?lit$135805713$--><path d="M12.877 19H7.123A1.125 1.125 0 0 1 6 17.877V11H2.126a1.114 1.114 0 0 1-1.007-.7 1.249 1.249 0 0 1 .171-1.343L9.166.368a1.128 1.128 0 0 1 1.668.004l7.872 8.581a1.25 1.25 0 0 1 .176 1.348 1.113 1.113 0 0 1-1.005.7H14v6.877A1.125 1.125 0 0 1 12.877 19ZM7.25 17.75h5.5v-8h4.934L10 1.31 2.258 9.75H7.25v8ZM2.227 9.784l-.012.016c.01-.006.014-.01.012-.016Z"></path><!--?--> </svg>
+                                     <div class="like-count">52</div>
+                                    <svg class="dislike-icon" rpl="" fill="currentColor" height="16" icon-name="downvote-outline" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"> <!--?lit$135805713$--><!--?lit$135805713$--><path d="M10 20a1.122 1.122 0 0 1-.834-.372l-7.872-8.581A1.251 1.251 0 0 1 1.118 9.7 1.114 1.114 0 0 1 2.123 9H6V2.123A1.125 1.125 0 0 1 7.123 1h5.754A1.125 1.125 0 0 1 14 2.123V9h3.874a1.114 1.114 0 0 1 1.007.7 1.25 1.25 0 0 1-.171 1.345l-7.876 8.589A1.128 1.128 0 0 1 10 20Zm-7.684-9.75L10 18.69l7.741-8.44H12.75v-8h-5.5v8H2.316Zm15.469-.05c-.01 0-.014.007-.012.013l.012-.013Z"></path><!--?--> </svg>
+                                </div>
+                                 <div class="comment">
+                                     <svg class="comment-icon" rpl="" aria-hidden="true" class="icon-comment" fill="currentColor" height="20" icon-name="comment-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"> <!--?lit$135805713$--><!--?lit$135805713$--><path d="M7.725 19.872a.718.718 0 0 1-.607-.328.725.725 0 0 1-.118-.397V16H3.625A2.63 2.63 0 0 1 1 13.375v-9.75A2.629 2.629 0 0 1 3.625 1h12.75A2.63 2.63 0 0 1 19 3.625v9.75A2.63 2.63 0 0 1 16.375 16h-4.161l-4 3.681a.725.725 0 0 1-.489.191ZM3.625 2.25A1.377 1.377 0 0 0 2.25 3.625v9.75a1.377 1.377 0 0 0 1.375 1.375h4a.625.625 0 0 1 .625.625v2.575l3.3-3.035a.628.628 0 0 1 .424-.165h4.4a1.377 1.377 0 0 0 1.375-1.375v-9.75a1.377 1.377 0 0 0-1.374-1.375H3.625Z"></path><!--?--> </svg>
+                                     <div class="comment-count">
+                                            15
+                                    </div>
+                                </div>
+                                 <div class="share">
+                                     <svg class="share-icon" rpl="" aria-hidden="true" class="icon-share" fill="currentColor" height="20" icon-name="share-ios-outline" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"> <!--?lit$135805713$--><!--?lit$135805713$--><path d="M19 11v5.378A2.625 2.625 0 0 1 16.378 19H3.622A2.625 2.625 0 0 1 1 16.378V11h1.25v5.378a1.373 1.373 0 0 0 1.372 1.372h12.756a1.373 1.373 0 0 0 1.372-1.372V11H19ZM9.375 3.009V14h1.25V3.009l2.933 2.933.884-.884-4-4a.624.624 0 0 0-.884 0l-4 4 .884.884 2.933-2.933Z"></path><!--?--> </svg>
+                                    <div class="share-text">
+                                         Share
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-bottom-part-right">
+                        <div class="populer-communities">
+                            <div class="populer-communities-text">
+                                <b>POPULER COMMUNITIES</b>
+                            </div>
+                            <div class="communities">
+                                <img class="community-image" src="https://styles.redditmedia.com/t5_2vq0w/styles/communityIcon_9o8mqi4fd6h51.png">
+                                <div class="community-info">
+                                    <div class="community-name">
+                                        r/DestinyTheGame
+                                    </div>
+                                    <div class="community-membernumber">
+                                        2,953,849 members
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="communities">
+                                <img class="community-image" src="https://styles.redditmedia.com/t5_2qh22/styles/communityIcon_7zk4pnm805bc1.png">
+                                <div class="community-info">
+                                    <div class="community-name">
+                                        r/anime
+                                    </div>
+                                    <div class="community-membernumber">
+                                        9,188,431 members
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="communities">
+                                <img class="community-image" src="https://styles.redditmedia.com/t5_3h47q/styles/communityIcon_zqvf8dnae26b1.jpg?format=pjpg&s=0b962cdc797fd23a9e335c94ac78398d32108165">
+                                <div class="community-info">
+                                    <div class="community-name">
+                                        r/NintendoSwitch
+                                    </div>
+                                    <div class="community-membernumber">
+                                        5,581,352 members
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="communities">
+                                <img class="community-image" src="https://styles.redditmedia.com/t5_2qzb6/styles/communityIcon_v0zs2b3d7f251.png">
+                                <div class="community-info">
+                                    <div class="community-name">
+                                        r/IAmA
+                                    </div>
+                                    <div class="community-membernumber">
+                                        22,580,706 members
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="communities">
+                                <img class="community-image" src="https://a.thumbs.redditmedia.com/KZESzgF91cP3KEAR29JhCFmX0zxsPgY1sYhv7XCtiW0.png">
+                                <div class="community-info">
+                                    <div class="community-name">
+                                        r/explainlikeimfive
+                                    </div>
+                                    <div class="community-membernumber">
+                                        22,760,074 members
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seemore-text">
+                                See More
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
+

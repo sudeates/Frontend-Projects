@@ -1,0 +1,276 @@
+body{
+    background-color: #000000;
+  }
+  
+  
+  * {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  
+  #content{
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  #content-left{
+    width: 16%;
+    border-right:1px solid rgb(38,38,38);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  #content-left-logo{
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+  #content-right{
+    width: 84%;
+    display: flex;
+  }
+  #content-right-left{
+    width: 65%;
+    border-right:1px solid rgb(38,38,38);
+    padding-right: 66px;
+  }
+  
+  #content-right-right{
+    width: 35%;
+  }
+  
+  #content-left-menu{
+    margin-top: 40px;
+  }
+  #content-right-left-top{
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+  #content-right-left-bottom{
+    width: 470px;
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-top:50px;
+  }
+  .left-menu-item{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .left-menu-item:hover{
+    background-color: rgb(38,38,38);
+  }
+  
+  .left-menu-item-text{
+    margin-left: 15px;
+    font-size: 20px;
+  }
+  
+  .left-menu-item-text.selected{
+    font-weight: bold;
+  }
+  
+  
+  #content-left-bottom{
+    padding-bottom: 10px;
+  }
+  
+  .content-left-bottom-button{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .content-left-bottom-button-text{
+    margin-left: 15px;
+    font-size: 16px;
+  }
+.user-name{
+    font-size: 12px;
+    margin-top: 1px;
+}
+.story-button{
+    width: 64px;
+    height: 84px;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    
+}
+.story{
+    padding-top: 8px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.story-container{
+  position: relative;
+  display: inline-block;
+  width: 62px;
+  height: 62px;
+  background: linear-gradient(40deg,gold,deeppink);
+  border-radius: 100%;
+  padding-top: 3px;
+}
+.story-arrow{
+  position: absolute;
+  font-weight:bolder;
+  color: black;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 100%;
+  font-size: 20px;
+  z-index: 2;
+  right: 440px;
+  top: 75px;
+}
+.profile-picture{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    border: solid;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    object-fit: cover;
+
+}
+.profile-information{
+  width: 470px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  
+}
+.posts-part{
+  width: 468px;
+  height: 468px;
+  padding-top: 10px;
+}
+.post-icon{
+  width: 468px;
+  height: 468px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.post-description{
+  width: 470px;
+  height: 181px;
+}
+.like-comment-share{
+  display: flex;
+  padding-top: 15px;
+  align-items: center;
+}
+.like-comment-share-icon{
+  width: 40px;
+  height: 40px;
+}
+.save-icon{
+  display: flex;
+  height: 40px;
+  width: 40px;
+}
+.profile-photo{
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+}
+.comment-bar{
+  color: gray;
+  background-color: #000000;
+  border: none;
+  height: 18px;
+  font-size: 14px;
+}
+
+.translator{
+  font-size: 12px;
+  padding-top: 6px;
+}
+
+.switch-account{
+  display: flex;
+  width: 287px;
+  height: 44px; 
+  padding-top: 60px;
+  padding-left: 18px;
+}
+.account-picture{
+  height: 44px;
+  height: 44px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.account-name-part{
+  padding-left: 10px;
+  padding-top: 4px;
+}
+.account-username{
+  font-size: 13px;
+}
+.account-name{
+  font-size: 12px;
+  color: gray;
+}
+.switch-account-left{
+ padding-top: 10px;
+ padding-left: 100px;
+}
+.switch-account-left-text{
+  color: rgb(0,149,246);
+  font-size: 12px;
+}
+.recommented-to-you{
+  display: flex;
+  padding-top: 25px;
+  padding-left: 18px;
+} 
+.recommented-to-you-text{
+  color: gray;
+  font-size: 14px;
+  font-weight: bold;
+}
+.see-all-text{
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 80px;
+  color: rgb(231, 231, 231);
+}
+.recommendations{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.recommented-people{
+  display: flex;
+  width: 287px;
+  height: 44px; 
+  padding-top: 20px;
+  padding-left: 18px;
+}
+.hakkinda{
+  width: 287px;
+  padding-top: 30px;
+  padding-left: 18px;
+}
+.hakkinda-text{
+  font-size: 12px;
+  color: rgb(115,115,115);
+}
+.instagram-text{
+  padding-top: 15px;
+  font-size: 12px;
+  color: rgb(115,115,115);
+}

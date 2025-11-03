@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="instagram.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <style>
+        body {
+            background-color: #000000;
+        }
+
+        textarea:focus,
+        input:focus {
+            outline: none;
+        }
+
+
+        * {
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+
+        #content {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        #content-left {
+            width: 16%;
+            border-right: 1px solid rgb(38, 38, 38);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        #content-left-logo {
+            padding-right: 20px;
+            padding-top: 20px;
+        }
+
+        #content-right {
+            width: 84%;
+            display: flex;
+        }
+
+
+        #content-right-left {
+            width: 65%;
+            border-right: 1px solid rgb(38, 38, 38);
+            padding-right: 66px;
+        }
+
+        #content-right-right {
+            width: 35%;
+            padding-right: 70px;
+        }
+
+        #content-left-menu {
+            margin-top: 40px;
+        }
+
+        #content-right-left-top {
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+
+        #content-right-left-bottom {
+            padding-right: 80px;
+            padding-left: 80px;
+            padding-top: 50px;
+        }
+
+        .left-menu-item {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .left-menu-item:hover {
+            background-color: rgb(38, 38, 38);
+        }
+
+        .left-menu-item-text {
+            margin-left: 15px;
+            font-size: 20px;
+        }
+
+        .left-menu-item-text.selected {
+            font-weight: bold;
+        }
+
+
+        #content-left-bottom {
+            padding-bottom: 10px;
+        }
+
+        .content-left-bottom-button {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+
+        .content-left-bottom-button-text {
+            margin-left: 15px;
+            font-size: 16px;
+        }
+
+        .user-name {
+            font-size: 12px;
+            margin-top: 1px;
+        }
+
+        .story-button {
+            width: 64px;
+            height: 84px;
+            background-color: black;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .story {
+            padding-top: 8px;
+            padding-left: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            position: relative;
+        }
+
+        .story-container {
+            position: relative;
+            display: inline-block;
+            width: 62px;
+            height: 62px;
+            background: linear-gradient(40deg, gold, deeppink);
+            border-radius: 100%;
+            padding-top: 3px;
+        }
+
+        .story-arrow {
+            position: absolute;
+            font-weight: bolder;
+            color: black;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border-radius: 100%;
+            font-size: 20px;
+            z-index: 2;
+            right: -40px;
+            top: 35px;
+        }
+
+        .profile-picture {
+            width: 56px;
+            height: 56px;
+            border-radius: 100%;
+            border: solid;
+            border-width: 2px;
+            border-color: rgb(0, 0, 0);
+            object-fit: cover;
+
+        }
+
+        .profile-information {
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .posts-part {
+            height: 468px;
+            padding-top: 10px;
+        }
+
+        .post-icon {
+            width: 100%;
+            height: 468px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .post-description {
+            height: 181px;
+        }
+
+        .like-comment-share {
+            display: flex;
+            padding-top: 15px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+
+        .like-comment-share-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .save-icon {
+            display: flex;
+            height: 40px;
+            width: 40px;
+        }
+
+        .profile-photo {
+            height: 32px;
+            width: 32px;
+            border-radius: 16px;
+        }
+
+        .comment-bar {
+            color: gray;
+            background-color: #000000;
+            border: none;
+            height: 18px;
+            font-size: 14px;
+        }
+
+        .translator {
+            font-size: 12px;
+            padding-top: 6px;
+        }
+
+        .switch-account {
+            display: flex;
+            height: 44px;
+            padding-top: 60px;
+            padding-left: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .account-picture {
+            height: 44px;
+            width: 44px;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+
+        .account-name-part {
+            padding-left: 10px;
+            padding-top: 4px;
+        }
+
+        .account-username {
+            font-size: 13px;
+        }
+
+        .account-name {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .switch-account-left {}
+
+        .switch-account-left-text {
+            color: rgb(0, 149, 246);
+            font-size: 12px;
+        }
+
+        .recommented-to-you {
+            display: flex;
+            padding-top: 25px;
+            padding-left: 18px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .recommented-to-you-text {
+            color: gray;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .see-all-text {
+            font-size: 12px;
+            font-weight: bold;
+
+            color: rgb(231, 231, 231);
+        }
+
+        .recommendations {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .recommented-people {
+            display: flex;
+            height: 44px;
+            padding-top: 20px;
+            padding-left: 18px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hakkinda {
+            width: 287px;
+            padding-top: 30px;
+            padding-left: 18px;
+        }
+
+        .hakkinda-text {
+            font-size: 12px;
+            color: rgb(115, 115, 115);
+        }
+
+        .instagram-text {
+            padding-top: 15px;
+            font-size: 12px;
+            color: rgb(115, 115, 115);
+        }
+
+        #heart-btn-svg:hover {
+            fill: red !important;
+            transition: all .3s;
+        }
+
+        #heart-btn-svg {
+            transition: all .3s;
+        }
+
+        .yorum-btn-class.active{
+            fill: red !important;
+            color: red !important;
+            width: 50px;
+            height: 50px; 
+        }
+    </style>
+
+    <div id="content">
+
+
+
+
+        <div id="content-left">
+
+            <div>
+                <div id="content-left-logo">
+                    <svg aria-label="Instagram" class="_ab6-" color="rgb(245, 245, 245)" fill="rgb(245, 245, 245)"
+                        height="29" role="img" viewBox="32 4 113 32" width="103">
+                        <path clip-rule="evenodd"
+                            d="M37.82 4.11c-2.32.97-4.86 3.7-5.66 7.13-1.02 4.34 3.21 6.17 3.56 5.57.4-.7-.76-.94-1-3.2-.3-2.9 1.05-6.16 2.75-7.58.32-.27.3.1.3.78l-.06 14.46c0 3.1-.13 4.07-.36 5.04-.23.98-.6 1.64-.33 1.9.32.28 1.68-.4 2.46-1.5a8.13 8.13 0 0 0 1.33-4.58c.07-2.06.06-5.33.07-7.19 0-1.7.03-6.71-.03-9.72-.02-.74-2.07-1.51-3.03-1.1Zm82.13 14.48a9.42 9.42 0 0 1-.88 3.75c-.85 1.72-2.63 2.25-3.39-.22-.4-1.34-.43-3.59-.13-5.47.3-1.9 1.14-3.35 2.53-3.22 1.38.13 2.02 1.9 1.87 5.16ZM96.8 28.57c-.02 2.67-.44 5.01-1.34 5.7-1.29.96-3 .23-2.65-1.72.31-1.72 1.8-3.48 4-5.64l-.01 1.66Zm-.35-10a10.56 10.56 0 0 1-.88 3.77c-.85 1.72-2.64 2.25-3.39-.22-.5-1.69-.38-3.87-.13-5.25.33-1.78 1.12-3.44 2.53-3.44 1.38 0 2.06 1.5 1.87 5.14Zm-13.41-.02a9.54 9.54 0 0 1-.87 3.8c-.88 1.7-2.63 2.24-3.4-.23-.55-1.77-.36-4.2-.13-5.5.34-1.95 1.2-3.32 2.53-3.2 1.38.14 2.04 1.9 1.87 5.13Zm61.45 1.81c-.33 0-.49.35-.61.93-.44 2.02-.9 2.48-1.5 2.48-.66 0-1.26-1-1.42-3-.12-1.58-.1-4.48.06-7.37.03-.59-.14-1.17-1.73-1.75-.68-.25-1.68-.62-2.17.58a29.65 29.65 0 0 0-2.08 7.14c0 .06-.08.07-.1-.06-.07-.87-.26-2.46-.28-5.79 0-.65-.14-1.2-.86-1.65-.47-.3-1.88-.81-2.4-.2-.43.5-.94 1.87-1.47 3.48l-.74 2.2.01-4.88c0-.5-.34-.67-.45-.7a9.54 9.54 0 0 0-1.8-.37c-.48 0-.6.27-.6.67 0 .05-.08 4.65-.08 7.87v.46c-.27 1.48-1.14 3.49-2.09 3.49s-1.4-.84-1.4-4.68c0-2.24.07-3.21.1-4.83.02-.94.06-1.65.06-1.81-.01-.5-.87-.75-1.27-.85-.4-.09-.76-.13-1.03-.11-.4.02-.67.27-.67.62v.55a3.71 3.71 0 0 0-1.83-1.49c-1.44-.43-2.94-.05-4.07 1.53a9.31 9.31 0 0 0-1.66 4.73c-.16 1.5-.1 3.01.17 4.3-.33 1.44-.96 2.04-1.64 2.04-.99 0-1.7-1.62-1.62-4.4.06-1.84.42-3.13.82-4.99.17-.8.04-1.2-.31-1.6-.32-.37-1-.56-1.99-.33-.7.16-1.7.34-2.6.47 0 0 .05-.21.1-.6.23-2.03-1.98-1.87-2.69-1.22-.42.39-.7.84-.82 1.67-.17 1.3.9 1.91.9 1.91a22.22 22.22 0 0 1-3.4 7.23v-.7c-.01-3.36.03-6 .05-6.95.02-.94.06-1.63.06-1.8 0-.36-.22-.5-.66-.67-.4-.16-.86-.26-1.34-.3-.6-.05-.97.27-.96.65v.52a3.7 3.7 0 0 0-1.84-1.49c-1.44-.43-2.94-.05-4.07 1.53a10.1 10.1 0 0 0-1.66 4.72c-.15 1.57-.13 2.9.09 4.04-.23 1.13-.89 2.3-1.63 2.3-.95 0-1.5-.83-1.5-4.67 0-2.24.07-3.21.1-4.83.02-.94.06-1.65.06-1.81 0-.5-.87-.75-1.27-.85-.42-.1-.79-.13-1.06-.1-.37.02-.63.35-.63.6v.56a3.7 3.7 0 0 0-1.84-1.49c-1.44-.43-2.93-.04-4.07 1.53-.75 1.03-1.35 2.17-1.66 4.7a15.8 15.8 0 0 0-.12 2.04c-.3 1.81-1.61 3.9-2.68 3.9-.63 0-1.23-1.21-1.23-3.8 0-3.45.22-8.36.25-8.83l1.62-.03c.68 0 1.29.01 2.19-.04.45-.02.88-1.64.42-1.84-.21-.09-1.7-.17-2.3-.18-.5-.01-1.88-.11-1.88-.11s.13-3.26.16-3.6c.02-.3-.35-.44-.57-.53a7.77 7.77 0 0 0-1.53-.44c-.76-.15-1.1 0-1.17.64-.1.97-.15 3.82-.15 3.82-.56 0-2.47-.11-3.02-.11-.52 0-1.08 2.22-.36 2.25l3.2.09-.03 6.53v.47c-.53 2.73-2.37 4.2-2.37 4.2.4-1.8-.42-3.15-1.87-4.3-.54-.42-1.6-1.22-2.79-2.1 0 0 .69-.68 1.3-2.04.43-.96.45-2.06-.61-2.3-1.75-.41-3.2.87-3.63 2.25a2.61 2.61 0 0 0 .5 2.66l.15.19c-.4.76-.94 1.78-1.4 2.58-1.27 2.2-2.24 3.95-2.97 3.95-.58 0-.57-1.77-.57-3.43 0-1.43.1-3.58.19-5.8.03-.74-.34-1.16-.96-1.54a4.33 4.33 0 0 0-1.64-.69c-.7 0-2.7.1-4.6 5.57-.23.69-.7 1.94-.7 1.94l.04-6.57c0-.16-.08-.3-.27-.4a4.68 4.68 0 0 0-1.93-.54c-.36 0-.54.17-.54.5l-.07 10.3c0 .78.02 1.69.1 2.09.08.4.2.72.36.91.15.2.33.34.62.4.28.06 1.78.25 1.86-.32.1-.69.1-1.43.89-4.2 1.22-4.31 2.82-6.42 3.58-7.16.13-.14.28-.14.27.07l-.22 5.32c-.2 5.37.78 6.36 2.17 6.36 1.07 0 2.58-1.06 4.2-3.74l2.7-4.5 1.58 1.46c1.28 1.2 1.7 2.36 1.42 3.45-.21.83-1.02 1.7-2.44.86-.42-.25-.6-.44-1.01-.71-.23-.15-.57-.2-.78-.04-.53.4-.84.92-1.01 1.55-.17.61.45.94 1.09 1.22.55.25 1.74.47 2.5.5 2.94.1 5.3-1.42 6.94-5.34.3 3.38 1.55 5.3 3.72 5.3 1.45 0 2.91-1.88 3.55-3.72.18.75.45 1.4.8 1.96 1.68 2.65 4.93 2.07 6.56-.18.5-.69.58-.94.58-.94a3.07 3.07 0 0 0 2.94 2.87c1.1 0 2.23-.52 3.03-2.31.09.2.2.38.3.56 1.68 2.65 4.93 2.07 6.56-.18l.2-.28.05 1.4-1.5 1.37c-2.52 2.3-4.44 4.05-4.58 6.09-.18 2.6 1.93 3.56 3.53 3.69a4.5 4.5 0 0 0 4.04-2.11c.78-1.15 1.3-3.63 1.26-6.08l-.06-3.56a28.55 28.55 0 0 0 5.42-9.44s.93.01 1.92-.05c.32-.02.41.04.35.27-.07.28-1.25 4.84-.17 7.88.74 2.08 2.4 2.75 3.4 2.75 1.15 0 2.26-.87 2.85-2.17l.23.42c1.68 2.65 4.92 2.07 6.56-.18.37-.5.58-.94.58-.94.36 2.2 2.07 2.88 3.05 2.88 1.02 0 2-.42 2.78-2.28.03.82.08 1.49.16 1.7.05.13.34.3.56.37.93.34 1.88.18 2.24.11.24-.05.43-.25.46-.75.07-1.33.03-3.56.43-5.21.67-2.79 1.3-3.87 1.6-4.4.17-.3.36-.35.37-.03.01.64.04 2.52.3 5.05.2 1.86.46 2.96.65 3.3.57 1 1.27 1.05 1.83 1.05.36 0 1.12-.1 1.05-.73-.03-.31.02-2.22.7-4.96.43-1.79 1.15-3.4 1.41-4 .1-.21.15-.04.15 0-.06 1.22-.18 5.25.32 7.46.68 2.98 2.65 3.32 3.34 3.32 1.47 0 2.67-1.12 3.07-4.05.1-.7-.05-1.25-.48-1.25Z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+
+                <div id="content-left-menu">
+
+                    <div class="left-menu-item">
+                        <div class="left-menu-item-logo"><svg aria-label="Ana Sayfa" class="_ab6-"
+                                color="rgb(245, 245, 245)" fill="rgb(245, 245, 245)" height="24" role="img"
+                                viewBox="0 0 24 24" width="24">
+                                <path
+                                    d="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z">
+                                </path>
+                            </svg></div>
+                        <div class="left-menu-item-text selected">Anasayfa</div>
+                    </div>
+                    <div class="left-menu-item">
+                        <div class="left-menu-item-logo">
+                            <svg aria-label="Ara" class="_ab6-" color="rgb(245, 245, 245)" fill="rgb(245, 245, 245)"
+                                height="24" role="img" viewBox="0 0 24 24" width="24">
+                                <path d="M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" fill="none"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                                <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" x1="16.511" x2="22" y1="16.511" y2="22"></line>
+                            </svg>
+
+                        </div>
+                        <div class="left-menu-item-text">Ara</div>
+                    </div>
+                    <div class="left-menu-item">
+                        <div class="left-menu-item-logo">
+                            <svg aria-label="Keşfet" class="_ab6-" color="rgb(245, 245, 245)" fill="rgb(245, 245, 245)"
+                                height="24" role="img" viewBox="0 0 24 24" width="24">
+                                <polygon fill="none"
+                                    points="13.941 13.953 7.581 16.424 10.06 10.056 16.42 7.585 13.941 13.953"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></polygon>
+                                <polygon fill-rule="evenodd"
+                                    points="10.06 10.056 13.949 13.945 7.581 16.424 10.06 10.056"></polygon>
+                                <circle cx="12.001" cy="12.005" fill="none" r="10.5" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="left-menu-item-text">Keşfet</div>
+                    </div>
+                    <div class="left-menu-item">
+                        <div class="left-menu-item-logo">
+                            <svg aria-label="Reels" class="_ab6-" color="rgb(245, 245, 245)" fill="rgb(245, 245, 245)"
+                                height="24" role="img" viewBox="0 0 24 24" width="24">
+                                <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"
+                                    x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line>
+                                <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line>
+                                <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line>
+                                <path
+                                    d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z"
+                                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                                <path
+                                    d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="left-menu-item-text">Reels</div>
+                    </div>
+                    <div class="left-menu-item">
+                        <div class="left-menu-item-logo">
+                            <svg aria-label="Messenger" class="_ab6-" color="rgb(245, 245, 245)"
+                                fill="rgb(245, 245, 245)" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                <path
+                                    d="M12.003 2.001a9.705 9.705 0 1 1 0 19.4 10.876 10.876 0 0 1-2.895-.384.798.798 0 0 0-.533.04l-1.984.876a.801.801 0 0 1-1.123-.708l-.054-1.78a.806.806 0 0 0-.27-.569 9.49 9.49 0 0 1-3.14-7.175 9.65 9.65 0 0 1 10-9.7Z"
+                                    fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.739">
+                                </path>
+                                <path
+                                    d="M17.79 10.132a.659.659 0 0 0-.962-.873l-2.556 2.05a.63.63 0 0 1-.758.002L11.06 9.47a1.576 1.576 0 0 0-2.277.42l-2.567 3.98a.659.659 0 0 0 .961.875l2.556-2.049a.63.63 0 0 1 .759-.002l2.452 1.84a1.576 1.576 0 0 0 2.278-.42Z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+
+                        </div>
+                        <div class="left-menu-item-text">Mesajlar</div>
+                    </div>
+                    <div class="left-menu-item">
+                        <div class="left-menu-item-logo">
+                            <svg aria-label="Bildirimler" class="x1lliihq x1n2onr6" color="rgb(245, 245, 245)"
+                                fill="rgb(245, 245, 245)" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                <title>Bildirimler</title>
+                                <path
+                                    d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z">
+                                </path>
+                            </svg>
+
+                        </div>
+                        <div class="left-menu-item-text">Bildirimler</div>
+                    </div>
+                    <div class="left-menu-item">
+                        <div class="left-menu-item-logo">
+                            <svg aria-label="Yeni Gönderi" class="_ab6-" color="rgb(245, 245, 245)"
+                                fill="rgb(245, 245, 245)" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                <path
+                                    d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552Z"
+                                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                                <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line>
+                                <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line>
+                            </svg>
+                        </div>
+                        <div class="left-menu-item-text">Oluştur</div>
+                    </div>
+                    <div class="left-menu-item">
+                        <div class="left-menu-item-logo">
+                            <img width="32px" height="32px"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG1dXcbGQTvqLXLBEQnr3S2ta1flJNUUc6kw&usqp=CAU" />
+                        </div>
+                        <div class="left-menu-item-text">Profil</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="content-left-bottom">
+                <div class="content-left-bottom-button">
+                    <div class="content-left-bottom-button-icon"><svg aria-label="Ayarlar" class="_ab6-"
+                            color="rgb(245, 245, 245)" fill="rgb(245, 245, 245)" height="24" role="img"
+                            viewBox="0 0 24 24" width="24">
+                            <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" x1="3" x2="21" y1="4" y2="4"></line>
+                            <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" x1="3" x2="21" y1="12" y2="12"></line>
+                            <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" x1="3" x2="21" y1="20" y2="20"></line>
+                        </svg>
+                    </div>
+
+                    <div class="content-left-bottom-button-text">Daha fazla</div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="content-right">
+
+            <div id="content-right-left">
+
+                <style>
+
+                </style>
+                <div id="content-right-left-top">
+                    <div class="swiper story">
+
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan 1
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan2
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan3
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan4
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan5
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan6
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan7
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan8
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan9
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan10
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan11
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan12
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="story-button">
+                                    <div class="story-container">
+                                        <img class="profile-picture"
+                                            src="https://imgscdn.stargazete.com/imgsdisk/2022/01/03/seda-sayan-programi-neden-767_2-41.jpg">
+                                    </div>
+                                    <p class="user-name">
+                                        sedasayan
+                                    </p>
+                                </button>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <script>
+                    const swiper = new Swiper('.story', {
+                        // Optional parameters
+                        direction: 'horizontal',
+                        loop: true,
+
+                        // If we need pagination
+                        pagination: {
+                            el: '.swiper-pagination',
+                        },
+
+                        // Navigation arrows
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+
+                        // And if we need scrollbar
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                        },
+                        slidesPerView: 10,
+
+                    });
+
+                </script>
+
+                <div id="content-right-left-bottom">
+                    <div class="posts-container">
+                        <div class="profile-information">
+                            <div style="display: flex;align-items: center">
+                                <img class="profile-photo"
+                                    src="data:image/jpeg;base64,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">
+                                <div style="font-size: 14px;
+                          padding-left: 10px;">
+                                    <strong>honeymoon</strong> • 14s
+                                </div>
+                            </div>
+                            <div class="other-options-icon">
+                                <svg aria-label="Diğer seçenekler" class="_ab6-" color="rgb(245, 245, 245)"
+                                    fill="rgb(245, 245, 245)" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                    <circle cx="12" cy="12" r="1.5"></circle>
+                                    <circle cx="6" cy="12" r="1.5"></circle>
+                                    <circle cx="18" cy="12" r="1.5"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="posts-part">
+                            <img class="post-icon"
+                                src="https://i.pinimg.com/736x/a2/66/18/a266187d82c1a8878ffd93d55e6973a8.jpg">
+                        </div>
+                        <div class="post-description" style="font-size: 14px;">
+                            <div class="like-comment-share">
+
+
+                                <div style="display: flex;">
+                                    <div class="like-comment-share-icon heart">
+                                        <svg id="heart-btn-svg" aria-label="Beğen" class="x1lliihq x1n2onr6"
+                                            color="rgb(245, 245, 245)" fill="rgb(245, 245, 245)" height="24" role="img"
+                                            viewBox="0 0 24 24" width="24">
+                                            <title>Beğen</title>
+                                            <path
+                                                d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="like-comment-share-icon">
+                                        <svg id="yorum-btn-id" onclick="onclickYorum()" aria-label="Yorum Yap"
+                                            class="yorum-btn-class" color="rgb(245, 245, 245)"
+                                            fill="rgb(245, 245, 245)" height="24" role="img" viewBox="0 0 24 24"
+                                            width="24">
+                                            <title>Yorum Yap</title>
+                                            <path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none"
+                                                stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path>
+                                        </svg>
+                                    </div>
+
+                                    <script>
+                                        function onclickYorum() {
+                                            let found = 0;
+                                            console.log("ok")
+                                            for (let i = 0; i < document.getElementById("yorum-btn-id").classList.length; i++) {
+                                                console.log(i)
+                                                if (document.getElementById("yorum-btn-id").classList[i] == 'active') {
+                                                    found = 1;
+                                                    break;
+                                                }
+                                            }
+                                            if (found == 0)
+                                                document.getElementById("yorum-btn-id").classList.add("active")
+                                            else
+                                                document.getElementById("yorum-btn-id").classList.remove("active")
+                                        }
+                                    </script>
+
+                                    <div class="like-comment-share-icon">
+                                        <svg aria-label="Gönderi Paylaş" class="x1lliihq x1n2onr6"
+                                            color="rgb(245, 245, 245)" fill="rgb(245, 245, 245)" height="24" role="img"
+                                            viewBox="0 0 24 24" width="24">
+                                            <title>Gönderi Paylaş</title>
+                                            <line fill="none" stroke="currentColor" stroke-linejoin="round"
+                                                stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line>
+                                            <polygon fill="none"
+                                                points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+                                                stroke="currentColor" stroke-linejoin="round" stroke-width="2">
+                                            </polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="save-icon">
+                                    <svg aria-label="Kaydet" class="x1lliihq x1n2onr6" color="rgb(245, 245, 245)"
+                                        fill="rgb(245, 245, 245)" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                        <title>Kaydet</title>
+                                        <polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21"
+                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"></polygon>
+                                    </svg>
+                                </div>
+
+
+
+
+
+                            </div>
+                            <div style="font-size: 14px;">
+                                <b>432.234 beğenme</b>
+                            </div>
+                            <div style="padding-top: 5px;">
+                                <b>honeymoon</b> Thank you for our full moon show, Baltimore
+                                And to jack and Margaret for coming
+                            </div>
+                            <div class="translator">
+                                <b>Cevirisine bak</b>
+                            </div>
+                            <div style="padding-top: 3px;
+                                color: gray;">
+                                3.443 yorumun tümünü gör
+                            </div>
+                            <input class="comment-bar" "text" placeholder="Yorum ekle...">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="content-right-right">
+                <div class="switch-account">
+                    <div style="display: flex;align-items: center">
+                        <img class="account-picture"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG1dXcbGQTvqLXLBEQnr3S2ta1flJNUUc6kw&amp;usqp=CAU">
+                        <div class="account-name-part">
+                            <div class="account-username">
+                                <b>bulentersoy</b>
+                            </div>
+                            <div class="account-name">
+                                bulent ersoy
+                            </div>
+                        </div>
+                    </div>
+                    <div class="switch-account-left">
+                        <div class="switch-account-left-text">
+                            Geçiş Yap
+                        </div>
+                    </div>
+                </div>
+                <div class="recommented-to-you">
+                    <div class="recommented-to-you-text">
+                        Senin icin önerilenler
+                    </div>
+                    <div class="see-all-text">
+                        Tümünü Gör
+                    </div>
+                </div>
+                <div class="recommendations">
+
+                    <div class="recommendations">
+                        <div class="recommented-people">
+                            <div style="display: flex">
+                                <img class="account-picture"
+                                    src="https://static.wikia.nocookie.net/gonewiththewind/images/9/94/3625.jpg/revision/latest?cb=20220718215737">
+                                <div class="account-name-part">
+                                    <div class="account-username">
+                                        <b>rhettbutler</b>
+                                    </div>
+                                    <div class="account-name">
+                                        sedasayan + 2 diğer kişi takip edi...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="switch-account-left">
+                                <div class="switch-account-left-text">
+                                    Takip et
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommented-people">
+                            <div style="display: flex">
+                                <img class="account-picture"
+                                    src="https://static.wikia.nocookie.net/gonewiththewind/images/9/94/3625.jpg/revision/latest?cb=20220718215737">
+                                <div class="account-name-part">
+                                    <div class="account-username">
+                                        <b>rhettbutler</b>
+                                    </div>
+                                    <div class="account-name">
+                                        sedasayan + 2 diğer kişi takip edi...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="switch-account-left">
+                                <div class="switch-account-left-text">
+                                    Takip et
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommented-people">
+                            <div style="display: flex">
+                                <img class="account-picture"
+                                    src="https://static.wikia.nocookie.net/gonewiththewind/images/9/94/3625.jpg/revision/latest?cb=20220718215737">
+                                <div class="account-name-part">
+                                    <div class="account-username">
+                                        <b>rhettbutler</b>
+                                    </div>
+                                    <div class="account-name">
+                                        sedasayan + 2 diğer kişi takip edi...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="switch-account-left">
+                                <div class="switch-account-left-text">
+                                    Takip et
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommented-people">
+                            <div style="display: flex">
+                                <img class="account-picture"
+                                    src="https://static.wikia.nocookie.net/gonewiththewind/images/9/94/3625.jpg/revision/latest?cb=20220718215737">
+                                <div class="account-name-part">
+                                    <div class="account-username">
+                                        <b>rhettbutler</b>
+                                    </div>
+                                    <div class="account-name">
+                                        sedasayan + 2 diğer kişi takip edi...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="switch-account-left">
+                                <div class="switch-account-left-text">
+                                    Takip et
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="hakkinda">
+                    <div class="hakkinda-text">
+                        Hakkında,
+                        Yardım,
+                        Basın,
+                        API,
+                        İş Fırsatları,
+                        Gizlilik,
+                        Koşullar,
+                        Konumlar,
+                        Dil,
+                        Meta Verified,
+                    </div>
+                    <div class="instagram-text">
+                        © 2023 INSTAGRAM FROM META
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
